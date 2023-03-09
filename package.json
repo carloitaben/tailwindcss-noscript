@@ -26,6 +26,7 @@
     "tailwindcss": "^3"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@types/node": "^18.14.6",
     "esbuild": "^0.17.11",
     "tailwindcss": "^3.2.7",
