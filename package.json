@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-noscript",
   "version": "0.1.0",
-  "description": "",
+  "description": "Conditionally apply Tailwind styles when JavaScript is enabled.",
   "main": "dist/index.js",
   "files": [
     "./dist/"
