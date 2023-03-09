@@ -13,7 +13,7 @@ export default plugin.withOptions<Options>((options = {}) => ({ addVariant }) =>
 
   // @ts-expect-error I'm sure this exists :(
   addVariant(variantPrefix, ({ modifySelectors }) => {
-    modifySelectors(() => `:merge(.${variantPrefix}) &`)
+    modifySelectors(() => `:merge(.js) &`)
   })
 })
 
