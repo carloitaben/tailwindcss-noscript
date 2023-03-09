@@ -1,14 +1,16 @@
-Conditionally apply Tailwind styles when JavaScript is enabled.
+# TailwindCSS `<noscript>`
+
+Apply Tailwind styles only when JavaScript is enabled.
 
 ## Why
 
-When animating an element above the fold, there will always be a flash of their default styles before the JavaScript animation library of your choice loads and applies the initial animation CSS. Something as simple as fading in the opacity of an element requires to either…
+When animating an element above the fold with JavaScript, the default styles of the element may be briefly visible before JavaScript loads and applies the initial animation styles. Something as simple as fading-in the opacity of an element requires to either…
 
-- Settle with a flash of opaque content (🤢)
-- Manually add the initial animation styles to your element and worsen your site for users without JS (😕)
-- The previous option, and manually resetting the styles with a `noscript` tag (🤮)
+- Settle with an ugly flash of opaque content (🤢)
+- Make the initial animation styles the default ones and disappoint your non-JavaScript-using visitors (😕)
+- Go with the previous option and manually reset the styles with a `noscript` tag (🤮)
 
-Doing the `noscript` tag thingie with `tailwindcss` is a pain in the ass, and so this library was born.
+Going with the `noscript` approach with `tailwindcss` can be quite cumbersome. This plugin can be used as an alternative method to maintain ergonomics in exchange for a minuscule amount of render-blocking JavaScript (less than 150 bytes).
 
 ## Installation
 
@@ -34,7 +36,7 @@ module.exports = {
 }
 ```
 
-You now need to add a tiny (less than 150 bytes) script to your `head` element:
+You now need to add a `script` tag to your `head` with the following content:
 
 ```tsx
 import { script } from "tailwindcss-noscript"
@@ -42,7 +44,7 @@ import { script } from "tailwindcss-noscript"
 <script src={script} />
 ```
 
-that's it. You can now add JS-only styles with the `js` variant:
+That's it. You can now add JS-only styles using the `js` variant prefix:
 
 ```tsx
 <div src="js:opacity-0 js:translate-y-1/2 md:js:translate-y-full" />
@@ -55,7 +57,15 @@ that's it. You can now add JS-only styles with the `js` variant:
 
 ```ts
 require("tailwindcss-noscript")({
-  // Defaults to `js`
+  // Defaults to "js"
   variantPrefix: "javascript",
 })
 ```
+
+## Acknowledgements
+
+- [`tailwindcss-radix`](https://npm.im/tailwindcss-radix)  
+  The API for this plugin configuration was borrowed from [`tailwindcss-radix`](https://npm.im/tailwindcss-radix), as I usually use it and I wanted both libraries to look nice when used together.
+
+- [`next-themes`](https://github.com/pacocoursey/next-themes)  
+  The mechanism to prevent CLS was inspired by [`next-themes`](https://github.com/pacocoursey/next-themes). I also took the idea of compressing the script with base64 from [`next-real-viewport`](https://github.com/basementstudio/next-real-viewport) (the folks at Basement Studio make lovely things 💖).
