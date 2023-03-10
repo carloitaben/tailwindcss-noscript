@@ -1,5 +1,11 @@
 # tailwindcss-noscript
 
+## 0.1.2
+
+### Patch Changes
+
+- Fixes issue with default export
+
 ## 0.1.1
 
 ### Patch Changes
