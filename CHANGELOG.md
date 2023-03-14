@@ -1,5 +1,11 @@
 # tailwindcss-noscript
 
+## 0.1.3
+
+### Patch Changes
+
+- Definitely works now
+
 ## 0.1.2
 
 ### Patch Changes
