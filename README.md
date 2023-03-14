@@ -10,7 +10,7 @@ When animating an element above the fold with JavaScript, the default styles of 
 - Make the initial animation styles the default ones and disappoint your non-JavaScript-using visitors (😕)
 - Go with the previous option and manually reset the styles with a `noscript` tag (🤮)
 
-Going with the `noscript` approach with `tailwindcss` can be quite cumbersome. This plugin can be used as an alternative method to maintain ergonomics in exchange for a minuscule amount of render-blocking JavaScript (less than 150 bytes).
+Going with the `noscript` approach with `tailwindcss` can be quite cumbersome. This plugin can be used as an alternative method to maintain ergonomics in exchange for a minuscule amount of render-blocking JavaScript.
 
 ## Installation
 
@@ -31,7 +31,7 @@ module.exports = {
   // ...
   plugins: [
     // ...
-    require("tailwindcss-noscript")(),
+    require("tailwindcss-noscript"),
   ],
 }
 ```
@@ -39,7 +39,7 @@ module.exports = {
 You now need to add a `script` tag to your `head` with the following content:
 
 ```tsx
-import { script } from "tailwindcss-noscript"
+import script from "tailwindcss-noscript/script"
 
 <script src={script} />
 ```
@@ -53,19 +53,7 @@ That's it. You can now add JS-only styles using the `js` variant prefix:
 > **Note**
 > When applying multiple variants, place the `js` prefix in the last place.
 
-## Options
-
-```ts
-require("tailwindcss-noscript")({
-  // Defaults to "js"
-  variantPrefix: "javascript",
-})
-```
-
 ## Acknowledgements
-
-- [`tailwindcss-radix`](https://npm.im/tailwindcss-radix)  
-  The API for this plugin configuration was borrowed from [`tailwindcss-radix`](https://npm.im/tailwindcss-radix), as I usually use it and I wanted both libraries to look nice when used together.
 
 - [`next-themes`](https://github.com/pacocoursey/next-themes)  
   The mechanism to prevent CLS was inspired by [`next-themes`](https://github.com/pacocoursey/next-themes). I also took the idea of compressing the script with base64 from [`next-real-viewport`](https://github.com/basementstudio/next-real-viewport) (the folks at Basement Studio make lovely things 💖).
