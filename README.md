@@ -44,6 +44,12 @@ import script from "tailwindcss-noscript/script"
 <script src={script} />
 ```
 
+If you are working with vanilla HTML, you can also copy and paste it:
+
+```html
+<script src="data:text/javascript;base64,KGZ1bmN0aW9uKCl7ZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmNsYXNzTGlzdC5hZGQoImpzIik7fSgpKQ=="></script>
+```
+
 That's it. You can now add JS-only styles using the `js` variant prefix:
 
 ```tsx
