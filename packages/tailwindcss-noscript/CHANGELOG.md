@@ -1,5 +1,11 @@
 # tailwindcss-noscript
 
+## 1.0.0
+
+### Major Changes
+
+- 3071787: Initial release
+
 ## 0.1.3
 
 ### Patch Changes

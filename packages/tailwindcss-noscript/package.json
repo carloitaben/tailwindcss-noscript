@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-noscript",
   "type": "commonjs",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Conditionally apply Tailwind styles when JavaScript is enabled.",
   "main": "dist/index.js",
