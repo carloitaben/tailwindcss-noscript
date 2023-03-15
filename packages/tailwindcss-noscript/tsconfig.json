@@ -2,10 +2,9 @@
   "compilerOptions": {
     "module": "CommonJS",
     "moduleResolution": "node",
-    "target": "ES6",
-    "declaration": true,
-    "outDir": "dist",
-    "lib": ["ES2017", "DOM"],
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
