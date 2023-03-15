@@ -43,8 +43,7 @@
     "test:e2e": "playwright test",
     "test": "pnpm run '/^test:.*/'",
     "build": "tsup",
-    "watch": "tsup --watch",
-    "prepublishOnly": "tsup"
+    "watch": "tsup --watch"
   },
   "peerDependencies": {
     "tailwindcss": "^3"
