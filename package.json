@@ -4,6 +4,9 @@
     "node": ">=14"
   },
   "packageManager": "pnpm@7.28.0",
+  "scripts": {
+    "ci:publish": "pnpm publish -r"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.26.0"
   }
