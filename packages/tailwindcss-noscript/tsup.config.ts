@@ -11,7 +11,7 @@ const source = encode(`(function(){document.documentElement.classList.add("js");
 const script = `data:text/javascript;base64,${source}`
 
 async function updateReadme() {
-  const readme = path.resolve(__dirname, "../../README.md")
+  const readme = path.resolve(__dirname, "./README.md")
   const buffer = await fs.readFile(readme)
   const content = buffer.toString()
   await fs.writeFile(readme, content.replace(regexp, source))
