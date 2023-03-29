@@ -50,11 +50,11 @@
     "tailwindcss": "^3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.31.2",
-    "@types/node": "^18.14.6",
-    "tailwindcss": "^3.2.7",
+    "@playwright/test": "^1.32.1",
+    "@types/node": "^18.15.11",
+    "tailwindcss": "^3.3.0",
     "tslib": "^2.5.0",
-    "tsup": "^6.6.3",
-    "typescript": "^4.9.5"
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
   }
 }
