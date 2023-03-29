@@ -26,20 +26,23 @@ pnpm i tailwindcss-noscript
 
 Add the plugin to the plugins array in your `tailwindcss` configuration file:
 
-```js
-module.exports = {
+```ts
+import type { Config } from "tailwindcss"
+import noscriptPlugin from "tailwindcss-noscript"
+
+export default {
   // ...
   plugins: [
     // ...
-    require("tailwindcss-noscript"),
-  ],
-}
+    noscriptPlugin,
+  ]
+} satisfies Config
 ```
 
 You now need to add a `script` tag to your `head` with the following content:
 
 ```tsx
-import script from "tailwindcss-noscript/script"
+import { script } from "tailwindcss-noscript"
 
 <script src={script} />
 ```

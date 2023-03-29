@@ -1,31 +1,20 @@
 {
   "name": "tailwindcss-noscript",
-  "type": "commonjs",
+  "type": "module",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Conditionally apply Tailwind styles when JavaScript is enabled.",
-  "main": "dist/index.js",
+  "main": "dist/index.sjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./script": {
-      "require": "./dist/script/index.js",
-      "import": "./dist/script/index.mjs",
-      "types": "./dist/script/index.d.ts"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "script": [
-        "./dist/script/index.d.ts"
-      ]
     }
   },
   "keywords": [
@@ -47,7 +36,7 @@
     "prepublishOnly": "tsup"
   },
   "peerDependencies": {
-    "tailwindcss": "^3"
+    "tailwindcss": "^3.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.32.1",
