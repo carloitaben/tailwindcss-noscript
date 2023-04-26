@@ -1,10 +1,10 @@
 {
   "name": "tailwindcss-noscript",
-  "type": "module",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Conditionally apply Tailwind styles when JavaScript is enabled.",
-  "main": "dist/index.sjs",
+  "sideEffects": false,
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
