@@ -1,5 +1,11 @@
 # tailwindcss-noscript
 
+## 2.0.1
+
+### Patch Changes
+
+- 979a929: Fixes a typo in `package.json`
+
 ## 2.0.0
 
 ### Major Changes
